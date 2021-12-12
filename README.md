@@ -10,4 +10,4 @@ go install github.com/smantic/bits
 ```
 $ bits 100
 7
-``
+```
