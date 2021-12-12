@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-var helpstr string = `bits - how many bits are required
+var helpstr string = `bits - how many bits are required to represent some number
 Usage: 
 	bits [-h] [-help] <number> 
 `
@@ -19,7 +19,12 @@ func main() {
 	flag.Parse()
 
 	if *h == true || *help == true {
-		fmt.Println(helpstr)
+		fmt.Printf(helpstr)
+		return
+	}
+
+	if len(os.Args) < 2 {
+		fmt.Printf(helpstr)
 		return
 	}
 
